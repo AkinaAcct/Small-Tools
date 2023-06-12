@@ -1,6 +1,8 @@
 #!/bin/bash
 #By nya
 #2023.6.12,23:00.
+set -e
+set -x
 #配置默认初始仓库分支为main
 git config --global init.defaultBranch "main"
 #配置username(可改为你自己的GitHub用户名)
