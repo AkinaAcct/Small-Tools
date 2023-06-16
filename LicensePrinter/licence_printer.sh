@@ -16,16 +16,18 @@ function print_licence(){
         1) curl -s ${APACHELIC_LINK};;
         2) curl -s ${MITLIC_LINK};;
         3) curl -s ${GPLLIC_LINK};;
-        4) curl -s ${LGPLLIC_LINK};;
+        4) curl -s ${MPLLIC_LINK};;
+        5) curl -s ${LGPLLIC_LINK};;
     esac
     exit 1
 }
 
 #print help
 function print_usage(){
-    echo "-h, print usage"
-    echo "-l, print supported licenses"
-    echo "-p, print a license"
+    echo "-h, Print usage.Input the number in the list of supported licenses."
+    echo "-l, Print a list of supported licenses."
+    echo "-p, Print a license."
+    echo -e "this script get all of these license from web(GitHub,original website).\nAll of the licenses are plain text from official website."
     exit 0
 }
 
