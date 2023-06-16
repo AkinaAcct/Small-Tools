@@ -4,7 +4,7 @@
 
 #links of diffent licenses
 APACHELIC_LINK="https://apache.org/licenses/LICENSE-2.0.txt"
-MITLIC_LINK="https://raw.githubusercontent.com/nya-main/Small-Tools/LicensePrinter/mitlic.txt"
+MITLIC_LINK="https://raw.githubusercontent.com/nya-main/Small-Tools/main/LicensePrinter/mitlic.txt"
 GPLLIC_LINK="https://www.gnu.org/licenses/gpl-3.0.txt"
 MPLLIC_LINK="https://www.mozilla.org/media/MPL/2.0/index.txt" #mozilla license
 LGPLLIC_LINK="https://www.gnu.org/licenses/lgpl-3.0.txt"
