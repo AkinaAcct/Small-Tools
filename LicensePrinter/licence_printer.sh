@@ -8,7 +8,7 @@ MITLIC_LINK="https://raw.githubusercontent.com/nya-main/Small-Tools/main/License
 GPLLIC_LINK="https://www.gnu.org/licenses/gpl-3.0.txt"
 MPLLIC_LINK="https://www.mozilla.org/media/MPL/2.0/index.txt" #mozilla license
 LGPLLIC_LINK="https://www.gnu.org/licenses/lgpl-3.0.txt"
-ALL_LICENCE=([1]Aache2.0 [2]MIT [3]GPL [4]MPL [5]LGPL)
+ALL_LICENCE=([1]Apache2.0 [2]MIT [3]GPL [4]MPL [5]LGPL)
 
 #printer function
 function print_licence(){
