@@ -40,10 +40,11 @@ function licence_list(){
 }
 
 #solve args
-while getopts hlp: ARGS;do
+while getopts :hlp: ARGS;do
     case ${ARGS} in
         h) print_usage;;
         l) licence_list;;
         p) print_licence ${OPTARG};;
+        *) echo -e "E:unknow argument.\nTry -h option to get some help." && exit 1;;
     esac
 done
