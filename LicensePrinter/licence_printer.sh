@@ -26,7 +26,7 @@ function print_licence(){
 function print_usage(){
     echo "-h, Print usage.Input the number in the list of supported licenses."
     echo "-l, Print a list of supported licenses."
-    echo "-p, Print a license."
+    echo "-p {NUM}, Print a license."
     echo -e "this script get all of these license from web(GitHub,original website).\nAll of the licenses are plain text from official website."
     exit 0
 }
@@ -40,11 +40,11 @@ function licence_list(){
 }
 
 #solve args
-while getopts :hlp: ARGS;do
+while getopts hlp: ARGS;do
     case ${ARGS} in
         h) print_usage;;
         l) licence_list;;
         p) print_licence ${OPTARG};;
-        *) echo -e "E:unknow argument.\nTry -h option to get some help." && exit 1;;
+        *) echo "Use the -h option to get the usage."
     esac
 done
