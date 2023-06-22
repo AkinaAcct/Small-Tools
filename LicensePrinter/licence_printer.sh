@@ -40,11 +40,12 @@ function licence_list(){
 }
 
 #solve args
-while getopts hlp: ARGS;do
+while getopts :hlp: ARGS;do
     case ${ARGS} in
         h) print_usage;;
         l) licence_list;;
         p) print_licence ${OPTARG};;
-        *) echo "Use the -h option to get the usage."
+        :) echo "-${OPTARG}需要一个选项" && exit 1;;
+        *) echo "Use the -h option to get the usage." && exit 1;;
     esac
 done
