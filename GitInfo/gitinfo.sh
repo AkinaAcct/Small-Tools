@@ -11,3 +11,7 @@ ALLLOCALBRANCH=$(git branch) #git branch
 ALLREMOTEBRANCH=$(git branch -r) #git branch -r
 
 ALLINFO=('${LINES}' '${STATUS}' '${ALLLOCALBRANCH}' '${ALLREMOTEBRANCH}' '${OBJSIZE}') #all info
+
+for i in "${ALLINFO[@]}";do
+    echo "$i"
+done
