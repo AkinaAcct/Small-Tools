@@ -31,8 +31,8 @@ while getopts :i:p:d:h OPT;do
         p) DOWNLOADPATH="${OPTARG}";;
         d) DLPROVIDER="${OPTARG}";;
         h) print_help && exit 0;;
-        :) echo -e "${RED}E${RESET}:选项-${OPT}需要一个参数.";;
-        ?) echo -e "${RED}E${RESET}:未知的选项:-${OPT}.";;
+        :) echo -e "${RED}E${RESET}:选项-${OPT}需要一个参数." && exit 1;;
+        ?) echo -e "${RED}E${RESET}:未知的选项:-${OPT}." && exit 1;;
     esac
 done
 start_download
