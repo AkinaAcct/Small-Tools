@@ -7,8 +7,7 @@ set -x
 termux-setup-storage
 termux-wake-lock
 CWD="$(pwd)"
-TMP=AtopesTMP
-mkdir -p ${TMP}
+TMPDIR="$(mktemp -d --suffix=_TAC)"
 cd ${TMP}
 
 # 字体替换
@@ -19,10 +18,7 @@ unzip JBM.zip
 ## 替换字体
 mv JetBrainsMonoNerdFont-Bold.ttf ${HOME}/.termux/font.ttf
 
-# 夹点私货
-## 打开项目主页
-termux-open-url https://github.com/AtopesSayuri/Small-Tools
-
 # 复位
 termux-wake-unlock
 cd ${CWD}
+rm -rf ${TMPDIR}
