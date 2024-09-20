@@ -8,8 +8,8 @@
 #       BEGIN OF SCRIPT         #
 #################################
 
-DOWNURL="https://ftp.debian.org/debian/pool/main/f/fakeroot/fakeroot_1.33.orig.tar.gz"
-SOLVERTMP="/tmp/nya_archfakeroot_solver"
+DOWNURL="https://ftp.debian.org/debian/pool/main/f/fakeroot/fakeroot_1.31.orig.tar.gz"
+SOLVERTMP="$(mktemp -d --suffix=_FRF)"
 
 #检测命令
 sudo pacman -Syu
@@ -29,7 +29,7 @@ tar xvf fr.tgz || exit 1
 
 #编译临时fakeroot
 echo "编译临时fakeroot"
-cd ${SOLVERTMP}/fakeroot-1.33/
+cd ${SOLVERTMP}/fakeroot*/
 ./bootstrap
 ./configure --prefix=${SOLVERTMP} --libdir=${SOLVERTMP}/fakeroot/libs --disable-static --with-ipc=tcp
 make -j$(nproc)
