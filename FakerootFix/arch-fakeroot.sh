@@ -8,8 +8,11 @@
 #       BEGIN OF SCRIPT         #
 #################################
 
+set -e
+
 DOWNURL="https://ftp.debian.org/debian/pool/main/f/fakeroot/fakeroot_1.31.orig.tar.gz"
-SOLVERTMP="$(mktemp -d --suffix=_FRF)"
+SOLVERTMP="/opt/FRF"
+sudo rm -rf ${SOLVERTMP}
 
 #检测命令
 sudo pacman -Syu
@@ -22,7 +25,8 @@ fi
 
 #获取源码
 echo "获取源码"
-mkdir ${SOLVERTMP} -p || exit 1	
+sudo mkdir ${SOLVERTMP} -p || exit 1	
+sudo chown $(whoami):$(whoami) ${SOLVERTMP} -R
 wget ${DOWNURL} -O ${SOLVERTMP}/fr.tgz || exit 1
 cd ${SOLVERTMP} || exit 1
 tar xvf fr.tgz || exit 1
