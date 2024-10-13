@@ -16,7 +16,7 @@ wget https://github.com/ryanoasis/nerd-fonts/releases/download/v3.1.1/JetBrainsM
 ## 解压
 unzip JBM.zip
 ## 替换字体
-mv JetBrainsMonoNerdFont-Bold.ttf ${HOME}/.termux/font.ttf
+mv JetBrainsMonoNerdFont-Regular.ttf ${HOME}/.termux/font.ttf
 
 # 复位
 termux-wake-unlock
