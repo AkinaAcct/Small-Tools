@@ -8,7 +8,6 @@
 #       BEGIN OF SCRIPT         #
 #################################
 
-set -e
 
 DOWNURL="https://ftp.debian.org/debian/pool/main/f/fakeroot/fakeroot_1.31.orig.tar.gz"
 SOLVERTMP="/opt/FRF"

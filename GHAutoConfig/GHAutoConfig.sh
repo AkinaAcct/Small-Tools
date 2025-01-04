@@ -14,5 +14,5 @@ git config --global http.postBuffer 10737418240
 git config --global https.postBuffer 10737418240
 # 使用gpg签名提交
 git config --global commit.gpgsign true
-git config --global user.signingkey C9412688654B8CB2
+git config --global user.signingkey E089711B4C7C2FA1
 ##########
